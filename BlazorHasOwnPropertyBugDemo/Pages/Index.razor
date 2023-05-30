@@ -1,0 +1,36 @@
+﻿@page "/"
+
+@inject IJSRuntime Js;
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<p>
+    <button @onclick="SendMessageAsync">Send Message</button>
+</p>
+
+@code {
+    IJSObjectReference? opener;
+
+    protected override async Task OnInitializedAsync()
+    {
+        opener = await Js.InvokeAsync<IJSObjectReference?>("wasmInterop.getOpener");
+    }
+
+    async Task SendMessageAsync()
+    {
+        ArgumentNullException.ThrowIfNull(opener);
+
+        // This one is fine
+        await opener.InvokeVoidAsync("postMessage", "hello");
+
+        // This one raises the error
+        await Js.InvokeVoidAsync("wasmInterop.sendReadyMessage", opener, "hello");
+    }
+
+}
