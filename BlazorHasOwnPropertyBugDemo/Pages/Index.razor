@@ -27,7 +27,7 @@ Welcome to your new app.
         ArgumentNullException.ThrowIfNull(opener);
 
         // This one is fine
-        await opener.InvokeVoidAsync("postMessage", "hello");
+        await opener.InvokeVoidAsync("postMessage", "hello", "*");
 
         // This one raises the error
         await Js.InvokeVoidAsync("wasmInterop.sendReadyMessage", opener, "hello");

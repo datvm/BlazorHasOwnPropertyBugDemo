@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHasOwnPropertyBugDemo", "BlazorHasOwnPropertyBugDemo\BlazorHasOwnPropertyBugDemo.csproj", "{CDE7D152-7722-4596-933C-A4650A083D7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHasOwnPropertyBugDemo", "BlazorHasOwnPropertyBugDemo\BlazorHasOwnPropertyBugDemo.csproj", "{CDE7D152-7722-4596-933C-A4650A083D7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostingWeb", "HostingWeb\HostingWeb.csproj", "{DD536507-7D89-46FE-B202-DC5D087E618C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CDE7D152-7722-4596-933C-A4650A083D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDE7D152-7722-4596-933C-A4650A083D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDE7D152-7722-4596-933C-A4650A083D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD536507-7D89-46FE-B202-DC5D087E618C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD536507-7D89-46FE-B202-DC5D087E618C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD536507-7D89-46FE-B202-DC5D087E618C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD536507-7D89-46FE-B202-DC5D087E618C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
